@@ -1,112 +1,112 @@
 [
     {
-        "question": "Which is the origin city of Targaryen dynysty?",
+        "question": "What is the origin city of the Targaryen dynasty?",
         "options": [
-            "essos",
-            "pentos",
+            "Essos",
+            "Pentos",
             "Valyria",
-            "oldtown"
+            "Oldtown"
         ],
         "correct": "Valyria",
         "score": 5
     },
     {
-        "question": "Which was the language used by KHalisi?",
+        "question": "Which language was used by Khaleesi?",
         "options": [
             "Dothraki",
-            "bravosi",
-            "northern",
-            "High valyrian"
+            "Braavosi",
+            "Northern",
+            "High Valyrian"
         ],
-        "correct": "dothraki",
+        "correct": "Dothraki",
         "score": 5
     },
     {
-        "question": "which was the seat of targaryen empire after the doom?",
+        "question": "What was the seat of the Targaryen empire after the Doom?",
         "options": [
-            "hightower",
-            "red keep",
-            "dragonstone",
-            "the vale"
+            "Hightower",
+            "Red Keep",
+            "Dragonstone",
+            "The Vale"
         ],
-        "correct": "dragonstone",
+        "correct": "Dragonstone",
         "score": 5
     },
     {
-        "question": "who were responsible for the knight king?",
+        "question": "Who were responsible for the Night King?",
         "options": [
-            "starks",
-            "children of the forest",
-            "faith of the seven",
-            "bravosi"
+            "Starks",
+            "Children of the Forest",
+            "Faith of the Seven",
+            "Braavosi"
         ],
-        "correct": "children of the forest",
+        "correct": "Children of the Forest",
         "score": 5
     },
     {
-        "question": "who saved the targaryens from the doom?",
+        "question": "Who saved the Targaryens from the Doom?",
         "options": [
-            "daenys",
-            "jon snow",
-            "drogon",
-            "rhegar"
+            "Daenys",
+            "Jon Snow",
+            "Drogon",
+            "Rhaegar"
         ],
-        "correct": "daenys",
+        "correct": "Daenys",
         "score": 5
     },
     {
-        "question": "what is the name of aegon's dragon?",
+        "question": "What is the name of Aegon's dragon?",
         "options": [
-            "drogon",
-            "vhagar",
-            "balerion",
-            "vermithor"
+            "Drogon",
+            "Vhagar",
+            "Balerion",
+            "Vermithor"
         ],
-        "correct": "balerion",
+        "correct": "Balerion",
         "score": 5
     },
     {
-        "question": "what was the real name of the mad king?",
+        "question": "What was the real name of the Mad King?",
         "options": [
-            "aryes",
-            "viserys",
-            "geoffrey",
-            "aemond"
+            "Aerys",
+            "Viserys",
+            "Joffrey",
+            "Aemond"
         ],
-        "correct": "aryes",
+        "correct": "Aerys",
         "score": 5
     },
     {
-        "question": "what were the bastards called in the north?",
+        "question": "What were the bastards called in the North?",
         "options": [
-            "wildlings",
-            "snow",
-            "fringes",
-            "birds"
+            "Wildlings",
+            "Snow",
+            "Fringes",
+            "Birds"
         ],
-        "correct": "snow",
+        "correct": "Snow",
         "score": 5
     },
     {
-        "question": "who created house lannister?",
+        "question": "Who created House Lannister?",
         "options": [
-            "cersie",
-            "jaimie",
-            "lann",
-            "robert"
+            "Cersei",
+            "Jaime",
+            "Lann",
+            "Robert"
         ],
-        "correct": "lann",
+        "correct": "Lann",
         "score": 5
     },
     {
-        "question": "who was the the most beautifull dragon that ever lived?",
+        "question": "Who was the most beautiful dragon that ever lived?",
         "options": [
-            "seasmoke",
-            "syrax",
-            "mylyes",
-            "sunfyre"
+            "Seasmoke",
+            "Syrax",
+            "Melys",
+            "Sunfyre"
         ],
-        "correct": "sunfyre",
+        "correct": "Sunfyre",
         "score": 5
     }
 ]

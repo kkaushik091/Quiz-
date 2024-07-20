@@ -5,14 +5,68 @@ body {
 #timer {
   display: flex;
   justify-content: center;
-  margin-left: 1350px;
   background-color: black;
   color: white;
+  height: 50px;
+  width: 50px;
+  font-weight: 600;
+  align-items: center;
+  position: absolute;
+  background: linear-gradient(145deg, #000000, #434343);
+  color: #ffffff;
+  font-family: "MedievalSharp", cursive;
+  font-size: 1.5em;
+  padding: 10px 20px;
+  border: 2px solid #d4af37;
+  border-radius: 5px;
+  text-shadow: 2px 2px 4px #000000;
+  box-shadow: 3px 3px 5px #000000;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 #quizInterface {
   display: flex;
+  height: 100vh;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+#questions {
+  font-size: 36px;
+  border: solid black 1px;
+  padding: 50px;
+  margin: 20px;
+  background-color: #dead79;
+  display: none;
+}
+
+input {
+  margin-right: 10px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.gotButton {
+  background: linear-gradient(145deg, #000000, #434343);
+  color: #ffffff;
+  font-family: "MedievalSharp", cursive;
+  font-size: 1.5em;
+  padding: 10px 20px;
+  border: 2px solid #d4af37;
+  border-radius: 5px;
+  text-shadow: 2px 2px 4px #000000;
+  box-shadow: 3px 3px 5px #000000;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.gotButton:hover {
+  background: linear-gradient(145deg, #434343, #000000);
+  box-shadow: 5px 5px 10px #000000;
+  /* transform: scale(1.1); */
 }

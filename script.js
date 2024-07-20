@@ -5,9 +5,13 @@ const questionDisplay = document.getElementById("questions");
 const next = document.getElementById("nextButton");
 const previous = document.getElementById("previousButton");
 
+// const questions = require("./question.json");
+
 // display questions
 let questions = [];
 let currentQuestionIndex = 0;
+
+let totalScore = 0;
 
 // store selected answers
 let selectedAnswers = {};
@@ -39,12 +43,19 @@ function displayQuestions() {
   // Create a new div element for the question
   const questionElement = document.createElement("div");
   questionElement.innerText = question.question;
+  questionElement.style["margin-bottom"] = "15px";
   quizContainer.appendChild(questionElement);
 
   // Create and append options
   question.options.forEach(function (option, index) {
     // Create a new div element for each option
-    const optionElement = document.createElement("div");
+    // const optionElement = document.createElement("div");
+    const optionElement = document.createElement("label");
+    optionElement.setAttribute("for", option);
+
+    // Create a label for options
+    // const optionLabel = document.createElement("label");
+    // optionLabel.setAttribute("for", option);
 
     // Create a new input element of type radio
 
@@ -52,15 +63,18 @@ function displayQuestions() {
     inputElement.type = "radio";
     inputElement.name = "option";
     inputElement.value = index;
+    inputElement.id = option;
 
-    // if the option was previously selected 
-    if(selectedAnswers[currentQuestionIndex]===index){
-        inputElement.checked = true;
+    // if the option was previously selected
+    if (selectedAnswers[currentQuestionIndex] === index) {
+      inputElement.checked = true;
     }
 
     // Append input and text to the option div
     optionElement.appendChild(inputElement);
     optionElement.append(option);
+    // optionLabel.appendChild(optionElement);
+    // quizContainer.appendChild(optionLabel);
     quizContainer.appendChild(optionElement);
   });
 
@@ -71,7 +85,7 @@ function displayQuestions() {
 // Timer
 
 let timer;
-let timeleft = 50;
+let timeleft = 300;
 
 function startTimer() {
   timer = setInterval(function () {
@@ -93,26 +107,39 @@ function startTimer() {
 }
 
 // submit the quiz
-let score = 0;
+
+const calculateScore = () => {
+  console.log(selectedAnswers);
+  console.log(questions);
+
+  let score = 0;
+
+  questions.forEach((el, index) => {
+    for (const key in selectedAnswers) {
+      if (index === Number(key)) {
+        if (el.options[Number(selectedAnswers.key)] === el.correct) {
+          score += 5;
+        }
+      }
+    }
+  });
+
+  console.log(score);
+
+  return score;
+};
 
 function submitQuiz() {
   // clearing the timer
   clearInterval(timer);
+  const userScore = calculateScore();
 
   // get the selected answer
   const selectedOption = document.querySelector(`input[name="option"]:checked`);
 
   // if an option was selected
   if (selectedOption) {
-    const answer = parseInt(selectedOption.value);
-    const correctAnswer = questions[currentQuestionIndex].options.indexOf(
-      questions[currentQuestionIndex].correct
-    );
-
-    //if the option is correct
-    if (answer === correctAnswer) {
-      score += questions[currentQuestionIndex].score;
-    }
+    score = userScore;
   }
 
   // hide navigation buttons and show the result
@@ -149,8 +176,12 @@ start.addEventListener("click", function () {
   startTimer();
   start.style.display = "none";
   next.style.display = "block";
-  previous.style.display = "none";
+  next.style["margin-left"] = "10px";
   submit.style.display = "block";
+  submit.style["margin-left"] = "10px";
+  questionDisplay.style.display = "flex";
+  questionDisplay.style.width = "75%";
+  questionDisplay.style["flex-direction"] = "column";
 });
 
 // next button
