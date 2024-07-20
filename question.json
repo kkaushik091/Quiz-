@@ -1,69 +1,112 @@
 [
     {
-        "question" : "Which is the origin city of Targaryen dynysty?",
-        "options" : ["essos" , "pentos" , "Valyria" , "oldtown" ] ,
-        "correct" : "Valyria" ,
-        "score" : 5
-
-
-    } ,
-     
-    {
-        "question" : "Which was the language used by KHalisi?",
-        "options" : ["dothraki" , "bravosi" , "northern" , "High valyrian" ] ,
-        "correct" : "dothraki" ,
-        "score" : 5
-
-    },
-
-    {
-        "question" : "which was the seat of targaryen empire after the doom?",
-        "options" : ["hightower" , "red keep" , "dragonstone" , "the vale" ] ,
-        "correct" : "dragonstone" ,
-        "score" : 5
-    },
-
-    {
-        "question" : "who were responsible for the knight king?",
-        "options" : ["starks" , "children of the forest" , "faith of the seven" , "bravosi" ] ,
-        "correct" : "children of the forest" ,
-        "score" : 5
-    } ,
-
-    {
-       "question" : "who saved the targaryens from the doom?",
-        "options" : ["daenys" , "jon snow" , "drogon" , "rhegar" ] ,
-        "correct" : "daenys" ,
-        "score" : 5 
-    } ,
-    {
-        "question" : "what is the name of aegon's dragon?",
-        "options" : ["drogon" , "vhagar" , "balerion" , "vermithor" ] ,
-        "correct" : "balerion" ,
-        "score" : 5
+        "question": "What is the origin city of the Targaryen dynasty?",
+        "options": [
+            "Essos",
+            "Pentos",
+            "Valyria",
+            "Oldtown"
+        ],
+        "correct": "Valyria",
+        "score": 5
     },
     {
-        "question" : "what was the real name of the mad king?",
-        "options" : ["aryes" , "viserys" , "geoffrey" , "aemond" ] ,
-        "correct" : "aryes" ,
-        "score" : 5
+        "question": "Which language was used by Khaleesi?",
+        "options": [
+            "Dothraki",
+            "Braavosi",
+            "Northern",
+            "High Valyrian"
+        ],
+        "correct": "Dothraki",
+        "score": 5
     },
     {
-        "question" : "what were the bastards called in the north?",
-        "options" : ["wildlings" , "snow" , "fringes" , "birds" ] ,
-        "correct" : "snow" ,
-        "score" : 5
+        "question": "What was the seat of the Targaryen empire after the Doom?",
+        "options": [
+            "Hightower",
+            "Red Keep",
+            "Dragonstone",
+            "The Vale"
+        ],
+        "correct": "Dragonstone",
+        "score": 5
     },
     {
-        "question" : "who created house lannister?",
-        "options" : ["cersie" , "jaimie" , "lann" , "robert" ] ,
-        "correct" : "lann" ,
-        "score" : 5
+        "question": "Who were responsible for the Night King?",
+        "options": [
+            "Starks",
+            "Children of the Forest",
+            "Faith of the Seven",
+            "Braavosi"
+        ],
+        "correct": "Children of the Forest",
+        "score": 5
     },
     {
-        "question" : "who was the the most beautifull dragon that ever lived?",
-        "options" : ["seasmoke" , "syrax" , "mylyes" , "sunfyre" ] ,
-        "correct" : "sunfyre" ,
-        "score" : 5
+        "question": "Who saved the Targaryens from the Doom?",
+        "options": [
+            "Daenys",
+            "Jon Snow",
+            "Drogon",
+            "Rhaegar"
+        ],
+        "correct": "Daenys",
+        "score": 5
+    },
+    {
+        "question": "What is the name of Aegon's dragon?",
+        "options": [
+            "Drogon",
+            "Vhagar",
+            "Balerion",
+            "Vermithor"
+        ],
+        "correct": "Balerion",
+        "score": 5
+    },
+    {
+        "question": "What was the real name of the Mad King?",
+        "options": [
+            "Aerys",
+            "Viserys",
+            "Joffrey",
+            "Aemond"
+        ],
+        "correct": "Aerys",
+        "score": 5
+    },
+    {
+        "question": "What were the bastards called in the North?",
+        "options": [
+            "Wildlings",
+            "Snow",
+            "Fringes",
+            "Birds"
+        ],
+        "correct": "Snow",
+        "score": 5
+    },
+    {
+        "question": "Who created House Lannister?",
+        "options": [
+            "Cersei",
+            "Jaime",
+            "Lann",
+            "Robert"
+        ],
+        "correct": "Lann",
+        "score": 5
+    },
+    {
+        "question": "Who was the most beautiful dragon that ever lived?",
+        "options": [
+            "Seasmoke",
+            "Syrax",
+            "Melys",
+            "Sunfyre"
+        ],
+        "correct": "Sunfyre",
+        "score": 5
     }
 ]
