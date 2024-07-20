@@ -115,11 +115,9 @@ const calculateScore = () => {
   let score = 0;
 
   questions.forEach((el, index) => {
-    for (const key in selectedAnswers) {
-      if (index === Number(key)) {
-        if (el.options[Number(selectedAnswers.key)] === el.correct) {
-          score += 5;
-        }
+    if (selectedAnswers.hasOwnProperty(index)) {
+      if (el.options[Number(selectedAnswers[index])] === el.correct) {
+        score += 5;
       }
     }
   });
@@ -128,6 +126,27 @@ const calculateScore = () => {
 
   return score;
 };
+
+// const calculateScore = () => {
+//   console.log(selectedAnswers);
+//   console.log(questions);
+
+//   let score = 0;
+
+//   questions.forEach((el, index) => {
+//     for (const key in selectedAnswers) {
+//       if (index === Number(key)) {
+//         if (el.options[Number(selectedAnswers.key)] === el.correct) {
+//           score += 5;
+//         }
+//       }
+//     }
+//   });
+
+//   console.log(score);
+
+//   return score;
+// };
 
 function submitQuiz() {
   // clearing the timer
