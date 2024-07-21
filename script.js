@@ -4,6 +4,7 @@ const submit = document.getElementById("submitButton");
 const questionDisplay = document.getElementById("questions");
 const next = document.getElementById("nextButton");
 const previous = document.getElementById("previousButton");
+const retake = document.getElementById("retakeButton");
 
 // const questions = require("./question.json");
 
@@ -85,7 +86,7 @@ function displayQuestions() {
 // Timer
 
 let timer;
-let timeleft = 300;
+let timeleft = 5;
 
 function startTimer() {
   timer = setInterval(function () {
@@ -100,8 +101,9 @@ function startTimer() {
 
     // if time runs out
     if (timeleft <= 0) {
+      console.log("timer", timeleft);
       clearInterval(timer);
-      submitQuiz;
+      submitQuiz({ timerFlag: true });
     }
   }, 1000); // update every second
 }
@@ -113,6 +115,8 @@ const calculateScore = () => {
   console.log(questions);
 
   let score = 0;
+
+  console.log(selectedAnswers);
 
   questions.forEach((el, index) => {
     if (selectedAnswers.hasOwnProperty(index)) {
@@ -148,24 +152,38 @@ const calculateScore = () => {
 //   return score;
 // };
 
-function submitQuiz() {
+function submitQuiz({ timerFlag = false }) {
   // clearing the timer
   clearInterval(timer);
+
   const userScore = calculateScore();
+
+  if (timerFlag) {
+    score = userScore;
+    // hide navigation buttons and show the result
+    next.style.display = "none";
+    previous.style.display = "none";
+    submit.style.display = "none";
+    displayResult();
+  }
 
   // get the selected answer
   const selectedOption = document.querySelector(`input[name="option"]:checked`);
 
+  // storing last question's response
+  selectedAnswers[currentQuestionIndex] = parseInt(selectedOption.value);
+
   // if an option was selected
   if (selectedOption) {
     score = userScore;
+    // hide navigation buttons and show the result
+    next.style.display = "none";
+    previous.style.display = "none";
+    submit.style.display = "none";
+    displayResult();
+  } else {
+    alert("Please select an option before submitting");
   }
-
-  // hide navigation buttons and show the result
-  next.style.display = "none";
-  previous.style.display = "none";
-  submit.style.display = "none";
-  displayResult();
 }
 
 function displayResult() {
@@ -177,6 +195,7 @@ function displayResult() {
     (score > 25 ? "passed" : "failed") +
     " the quiz.";
   submit.style.display = "none";
+  retake.style.display = "block";
 }
 
 // update button visibility
@@ -247,3 +266,7 @@ window.onload = () => {
   previous.style.display = "none";
   submit.style.display = "none";
 };
+
+retake.addEventListener("click", function () {
+  window.location.reload();
+});
